@@ -14,9 +14,11 @@ def cleaned(request):
     return render(request, 'properties/cleaned.html')
 
 def sms(request):
-	message = "";
-	from_number = request.POST["From"]
-	return "";
+	#from_number = request.POST["From"]
+	tennant = Tennant.objects.all()[0]
+	tennant.responded = True
+	tennant.save()
+	return render(request, 'properties/message_sent.html')
 
 def check(request):
 	responded = Tennant.objects.all()[0].responded
