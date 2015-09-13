@@ -1,32 +1,6 @@
-<html>
-	<head>
-		<script src="http://code.jquery.com/jquery-2.1.4.min.js"             ></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{% extends "base.html" %}
 
-	</head>
-	<body>
-	<div class='container'>
-  <div class="row">
-    <div class="col-md-12">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class='col-md-12'>
-          <div class="navbar-header">
-            </button> <a class="navbar-brand" href="#">ReClean</a>
-          </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Your properties</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="page-header">
-    <h1>Impact Hub Westminster, 1st Floor New Zealand House, 80 Haymarket, London, SW1Y 4TE, London</h1>
-  </div>
+{% block message-tennants %}
   <div>
     <h2 class='page-center'>Message to your tennants:</h2>
     <div class="row">
@@ -47,20 +21,14 @@
   </div><!-- /.col-lg-6 -->
 </div>
 </div>
+{% endblock message-tennants %}
 
-  <div>
-    <h2>Your tenants at this property:</h2>
-    <ul class="list-group">
-  <li class="list-group-item">
+{% block highlighted-tennant %}
     <span>Christiano Ronaldo</span>
     <span class="badge">+447557268573</span>
-  </li>
-  <li class="list-group-item">Lionel Messi</li>
-  <li class="list-group-item">Zlatan Ibrahimovic</li>
-  <li class="list-group-item">Andres Iniesta</li>
-  <li class="list-group-item">Manuel Neuer</li>
-</ul>
+{% endblock highlighted-tennant %}
+
+
+{% block apply-button %}
     <a class="btn btn-default" href="/send" role="button">Apply</a>
-  </div>
-	</body>
-</html>
+{% endblock apply-button %}

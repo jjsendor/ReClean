@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+	<div class='container'>
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class='col-md-12'>
+          <div class="navbar-header">
+            <div class="clearfix" id="u199">
+              <a href="/">
+                <img class="svg" id="u189" src="{% static 'properties/recleanlogo.svg' %}" width="54" height="54" alt="" data-mu-svgfallback="/images/recleanlogo_poster_.png"><!-- svg -->
+                <img class="svg" id="u194" src="{% static 'properties/recleantext.svg' %}" width="297" height="42" alt="" data-mu-svgfallback="/images/recleantext_poster_.png"><!-- svg -->
+              </a>
+            </div>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/cleaned">Your properties</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="page-header">
+    <h1>Impact Hub Westminster, 1st Floor New Zealand House, 80 Haymarket, London, SW1Y 4TE, London</h1>
+  </div>
+  {% block message-tennants %}{% endblock message-tennants %}
+
+  <div>
+    <h2>Your tenants at this property:</h2>
+    <ul class="list-group">
+  <li class="list-group-item">
+  {% block highlighted-tennant %}
+{% endblock highlighted-tennant %}
+  </li>
+  <li class="list-group-item">Lionel Messi</li>
+  <li class="list-group-item">Zlatan Ibrahimovic</li>
+  <li class="list-group-item">Andres Iniesta</li>
+  <li class="list-group-item">Manuel Neuer</li>
+</ul>
+    {% block apply-button %}{% endblock apply-button %}
+  </div>
+	</body>
+</html>
