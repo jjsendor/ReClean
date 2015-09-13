@@ -10,3 +10,5 @@ def send_message(request):
 
 def cleaned(request):
     return render(request, 'properties/cleaned.html')
+def sms(request):
+	pass

@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^send$', views.send_message, name='send'),
     url(r'^cleaned$', views.cleaned, name='cleaned'),
+    url(r'^sms$', views.cleaned, name='sms')
 ]
