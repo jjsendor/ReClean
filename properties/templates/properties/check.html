@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block message-tennants %}
+  {% if responded %}
+    <div class="alert alert-success" role="alert">
+      <span>This apartment is clean and neat!</span>
+    </div>
+  {% endif %}
+{% endblock message-tennants %}
+
+{% block highlighted-tennant %}
+    {% if responded %}
+      <h4 class="list-group-item-heading">Kuba Sendor</h4>
+      <span class="badge">+447557268573</span>
+      <p class="list-group-item-text">
+        <span class="label label-success">
+          <span class="glyphicon glyphicon-ok-circle"></span>
+          <span>This tenant has confirmed that the flat has been cleaned</span>
+        </span>
+      </p>
+    {% else %}
+      <span>Kuba Sendor</span>
+      <span class="badge">+447557268573</span>
+    {% endif %}
+{% endblock highlighted-tennant %}
+
+{% block apply-button %}
+{% endblock apply-button %}
