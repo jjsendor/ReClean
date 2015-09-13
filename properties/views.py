@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import twilio.twiml
+
 import twilio_api
 
 def index(request):
@@ -11,4 +13,6 @@ def send_message(request):
 def cleaned(request):
     return render(request, 'properties/cleaned.html')
 def sms(request):
-	pass
+	message = "";
+	from_number = request.POST["From"]
+	#return HttpResponse(from_number)
